@@ -1,30 +1,29 @@
 
 category
 --
-category_id VARCHAR PK
-category_name VARCHAR 	
+category_id VARCHAR(10) PK
+category_name VARCHAR(50)	
 
 
 subcategory
 --
-subcategory_id VARCHAR PK
-subcategory_name VARCHAR 
-
+subcategory_id VARCHAR(10) PK
+subcategory_name VARCHAR(50) 
 
 
 contacts
 --
 contact_id INT PK
-first_name VARCHAR
-last_name VARCHAR   
-email VARCHAR
+first_name VARCHAR(50)
+last_name VARCHAR(50)  
+email VARCHAR(100)
 
 
 campaign
 --
 cf_id INT PK
 contact_id INT FK - contacts.contact_id
-company_name VARCHAR
+company_name VARCHAR(100)
 description TEXT 
 goal NUMERIC(10,2) 
 pledged NUMERIC(10,2) 
@@ -37,4 +36,5 @@ end_date DATE
 category_id VARCHAR(10) FK - category.category_id
 subcategory_id VARCHAR(10) FK - subcategory.subcategory_id
 	
-	
+
+
